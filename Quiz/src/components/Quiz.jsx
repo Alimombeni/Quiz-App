@@ -17,7 +17,7 @@ const Quiz = ()=> {
                         <div className='card p-4' style={{ background: '#3d3d3d', borderColor: '#646464' }}>
                             <div className='d-flex justify-content-between gap-md-3'>
                                 <h5 className='mb-2 fst-normal lh-base'>{question?.question}</h5>
-                                <h5 style={{color: '#60d600' ,width:'100px' , textAlign:'right'}}>{quiz.indexOf(questionIndex) +1 } / {quiz?.length}</h5>
+                                <h5 style={{color: '#60d600' ,width:'100px' , textAlign:'right'}}>{quiz.indexOf(question) +1 } / {quiz?.length}</h5>
                             </div>
                             <div>
                                 {question?.options?.map(( item , index)=>

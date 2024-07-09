@@ -3,7 +3,7 @@ import DataContext from "../context/dataContext.jsx";
 
 
 const Result =() => {
-const {showResult ,startOver ,quiz , score} =useContext(DataContext)
+const {showTheResult ,startOver ,quiz , score ,showResult} =useContext(DataContext)
 
 
 
