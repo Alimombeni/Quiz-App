@@ -3,7 +3,7 @@ import DataContext from "../context/dataContext.jsx";
 
 
 const Result =() => {
-const {showResult} =useContext(DataContext)
+const {showResult ,startOver ,quiz , score} =useContext(DataContext)
 
 
 
@@ -16,16 +16,16 @@ const {showResult} =useContext(DataContext)
                 <div className='row vh-100 align-items-center justify-content-center  '>
                     <div className='col-lg-6'>
 
-                        <div className='text-light text-center p-5 rounded ' {`here bg-succsses or bg-danger`} >
+                        <div className={`text-light text-center p-5 rounded ${score > (quiz.length  * 5 / 2) ?'bg-success':'bg-danger'}` } >
 
                             <h1 className='mb-2 fw-bold'>
-                            {/*here show message  'awsome' 'oops!'*/}
+                                {score > (quiz.length * 5 / 2 ) ? 'Awesome' : 'Ooops!'}
                             </h1>
-                            <h3 className='mb-3 fw-bold '>
-                            {/*    here show your score  */}
+                            <h3 className='mb-3 fw-bold '>Your score is {score} out of {quiz.length * 5 }
+
 
                             </h3>
-                            <button className='btn py-2 px-4 btn-light fw-bold d-inline '>Start over</button>
+                            <button className='btn py-2 px-4 btn-light fw-bold d-inline ' onClick={startOver}>Start over</button>
                         </div>
                     </div>
                 </div>

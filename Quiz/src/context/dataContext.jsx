@@ -4,7 +4,7 @@ import {useState, useEffect, useContext, createContext} from "react";
 
 const DataContext = createContext({})
 
-const  DataProvider = ({children}) =>{
+export const  DataProvider = ({children}) =>{
 
     const [quiz, setQuiz]=useState([])
     const [question, setQuestion]=useState({})
@@ -37,8 +37,8 @@ const  DataProvider = ({children}) =>{
 
     //start show
 const start = () => {
-    setShowStart(true)
-    setShowQuiz(false)
+    setShowStart(false)
+    setShowQuiz(true)
 
 }
 
