@@ -1,16 +1,16 @@
-
-
+import {useContext} from "react";
+import DataContext from "../context/dataContext.jsx";
 
 
 const Result =() => {
-
+const {showResult} =useContext(DataContext)
 
 
 
 
     return (
 
-        <section className='bg-dark text-white'>
+        <section className='bg-dark text-white' style={{display: `${showResult ? 'block' : 'none'}`}}>
             <div className='container'>
 
                 <div className='row vh-100 align-items-center justify-content-center  '>
