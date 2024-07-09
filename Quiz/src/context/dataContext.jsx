@@ -75,7 +75,7 @@ const start = () => {
 //show result
 const showTheResult = ()=> {
         setShowStart(false)
-    setShowStart(false)
+        setShowQuiz(false)
     setShowResult(true)
 }
 
